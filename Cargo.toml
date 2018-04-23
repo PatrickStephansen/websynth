@@ -1,0 +1,9 @@
+[package]
+name = "websynth"
+version = "0.1.0"
+authors = ["Patrick Stephansen <pstephansen89@gmail.com>"]
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]
