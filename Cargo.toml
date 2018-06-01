@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Patrick Stephansen <pstephansen89@gmail.com>"]
 
 [dependencies]
+rand = "0.5"
 
 [lib]
 crate-type = ["cdylib"]
