@@ -8,7 +8,7 @@
 
 ## Build
 
-* Compile with `cargo +nightly build --target wasm32-unknown-unknown && wasm-bindgen --release`
+* Compile with `cargo +nightly build --target wasm32-unknown-unknown --release`
 * Minimise build size with `wasm-gc target/wasm32-unknown-unknown/release/websynth.wasm -o websynth.gc.wasm`
 
 ## Hosting
