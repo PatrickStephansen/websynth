@@ -1,8 +1,19 @@
-const audioContext = new window.AudioContext()
+import {  } from "websynth.gc";
+export class SynthOutput extends AudioWorkletProcessor {
+  constructor(options) {
+    super(options);
+  }
 
-const oscillator = audioContext.createOscillator();
+  process(inputs, outputs, parameters) {
+    let output = outputs[0];
+    const channels = outputs.length;
 
-oscillator.type = 'sine';
-oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // value in hertz
-oscillator.connect(audioContext.destination);
-oscillator.start();
+
+    for (let channel = 0; channel < output.length; channel++) {
+      output[channel].set(getSynthOutputBuffer());
+    }
+    return true;
+  }
+
+}
+registerProcessor('my-worklet-processor', SynthOutput);

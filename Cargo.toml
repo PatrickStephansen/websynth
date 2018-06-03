@@ -5,6 +5,7 @@ authors = ["Patrick Stephansen <pstephansen89@gmail.com>"]
 
 [dependencies]
 rand = "0.5"
+wasm-bindgen = "0.2.11"
 
 [lib]
 crate-type = ["cdylib"]
