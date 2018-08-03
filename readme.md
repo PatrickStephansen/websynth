@@ -3,7 +3,7 @@
 ## Rust to WASM toolchain
 
 * Install `rustup` with: `curl https://sh.rustup.rs -sSf | sh`. Use the default settings.
-* Follow the instructions at https://rust-lang-nursery.github.io/rust-wasm/setup.html. Skip `wasm-opt` for now.
+* Follow the instructions at https://rustwasm.github.io/book/game-of-life/setup.html. Skip `wasm-opt` for now.
 * Install wasm-bindgen `cargo +nightly install wasm-bindgen-cli`
 
 ## Build
@@ -19,6 +19,7 @@ A web host that supports the 'application/wasm' MIME type is needed for proper w
 
 * Web Audio API standard: https://webaudio.github.io/web-audio-api/
 * Web assembly audio worklet example: https://github.com/GoogleChromeLabs/web-audio-samples/tree/gh-pages/audio-worklet/design-pattern/awn
+* Rust WASM tutorial: https://rustwasm.github.io/book/game-of-life/
 
 ## Architecture
 
