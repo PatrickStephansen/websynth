@@ -1,5 +1,6 @@
 # Websynth
 
+
 ## Rust to WASM toolchain
 
 * Install `rustup` with: `curl https://sh.rustup.rs -sSf | sh`. Use the default settings.
@@ -50,3 +51,11 @@ Do as much audio processing as possible in Rust/WASM. Input may need to come fro
 ### UI
 
 UI events in the js space will call functions published by the Rust code. Displaying visualisations of audio will be pivotal to the design strategy. Again, as much as possible will be done to render frames on the Rust side. 
+
+## Audio worklets
+
+WASM in combination with worklets is just not viable at present. Loading a WASM module in the context of a worklet is hard, and bindgen can't be used there. Once in the context of a worklet, we lose scope of the DOM, so construting a whole synth in one node is not viable.
+
+The options are, use something in the window scope instead of worklets, or don't use WASM.
+
+For now, I choose the latter, and will start another project in pure js.
