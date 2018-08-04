@@ -1,0 +1,27 @@
+{
+  "name": "websynth",
+  "version": "1.0.0",
+  "description": "## Rust to WASM toolchain",
+  "main": "bootstrap.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cargo +nightly build --target wasm32-unknown-unknown --release && wasm-bindgen target/wasm32-unknown-unknown/release/websynth.wasm --out-dir .",
+    "package": "npm run build && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickStephansen/websynth.git"
+  },
+  "author": "Patrick Stephansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrickStephansen/websynth/issues"
+  },
+  "homepage": "https://github.com/PatrickStephansen/websynth#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

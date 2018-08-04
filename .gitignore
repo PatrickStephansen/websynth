@@ -1,4 +1,11 @@
+# rust build
 /target
 **/*.rs.bk
-**/*.gc.wasm
-**/*.gc.opt.wasm
+# wasm output
+*.wasm
+websynth.js
+websynth.d.ts
+# webpack bundle output
+/dist
+# node dependencies
+/node_modules

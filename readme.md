@@ -8,12 +8,14 @@
 
 ## Build
 
-* Compile with `cargo +nightly build --target wasm32-unknown-unknown --release`
-* Minimise build size with `wasm-gc target/wasm32-unknown-unknown/release/websynth.wasm -o websynth.gc.wasm`
+* `npm run build`
+* TODO: Minimise build size with `wasm-gc target/wasm32-unknown-unknown/release/websynth.wasm -o target/wasm32-unknown-unknown/release/websynth.gc.wasm`
 
 ## Hosting
 
 A web host that supports the 'application/wasm' MIME type is needed for proper wasm streaming. Install `https` using `cargo install https`. OpenSSL was missing on my machine, so I had to run `sudo apt-get install libssl-dev` before that would work. Once installed, run the site with the command `http` from the root of this repo.
+
+Easier: `npm start` to run webpack dev server
 
 ## Resources
 
